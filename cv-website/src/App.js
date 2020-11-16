@@ -8,6 +8,7 @@ import Slide from '@material-ui/core/Slide';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
+import Drawer from './Drawer'
 
 function HideOnScroll(props) {
   const { children, window } = props;
@@ -48,6 +49,7 @@ function App() {
             </Toolbar>
           </AppBar>
         </HideOnScroll>        
+        <Drawer></Drawer>
       <header className="App-header">
       </header>
     </div>
