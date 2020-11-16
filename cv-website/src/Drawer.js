@@ -1,4 +1,5 @@
 import "./Drawer.css";
+import "./Login.css";
 import React from 'react';
 import clsx from 'clsx';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
@@ -110,6 +111,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+
 export default function PersistentDrawerLeft() {
   const classes = useStyles();
   const theme = useTheme();
@@ -147,7 +149,12 @@ export default function PersistentDrawerLeft() {
                     <Typography variant="h6" className={classes.title} color="">
                         Curriculum Vitae
                     </Typography>
-                    <Button color="inherit">Login</Button>                    
+
+                    <Button
+                        color="inherit">
+                            Login
+                    </Button>        
+
                 </Toolbar>
             </AppBar>
         </HideOnScroll>   
