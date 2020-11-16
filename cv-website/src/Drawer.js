@@ -19,9 +19,23 @@ import ListItemText from '@material-ui/core/ListItemText';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
-import { blueGrey, brown } from '@material-ui/core/colors';
+import { brown, blue } from '@material-ui/core/colors';
+import Button from '@material-ui/core/Button';
+import useScrollTrigger from '@material-ui/core/useScrollTrigger';
+import Slide from '@material-ui/core/Slide';
 
 const drawerWidth = 240;
+
+function HideOnScroll(props) {
+    const { children, window } = props;
+    const trigger = useScrollTrigger({ target: window ? window() : undefined });
+  
+    return (
+      <Slide appear={false} direction="down" in={!trigger}>
+        {children}
+      </Slide>
+    );
+}
 
 const theme = createMuiTheme({
   palette: {
@@ -37,6 +51,7 @@ const theme = createMuiTheme({
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
+    flexGrow: 1,
   },
   appBar: {
     transition: theme.transitions.create(['margin', 'width'], {
@@ -64,6 +79,7 @@ const useStyles = makeStyles((theme) => ({
   },
   drawerPaper: {
     width: drawerWidth,
+    backgroundColor: blue[100],
   },
   drawerHeader: {
     display: 'flex',
@@ -89,6 +105,9 @@ const useStyles = makeStyles((theme) => ({
     }),
     marginLeft: 0,
   },
+  title: {
+    flexGrow: 1,
+  },
 }));
 
 export default function PersistentDrawerLeft() {
@@ -105,11 +124,12 @@ export default function PersistentDrawerLeft() {
   };
 
   return (
-      <main>
-        <ThemeProvider theme={theme}>
-            <div  className="PhotoHeader" >
+
+    <ThemeProvider theme={theme}>
+        <div  className="PhotoHeader" >
+        <HideOnScroll>
             <AppBar
-                position="fixed"
+                position="static"
                 className={clsx(classes.appBar, {
                 [classes.appBarShift]: open,
                 })}            
@@ -124,33 +144,37 @@ export default function PersistentDrawerLeft() {
                     >
                         <MenuIcon />
                     </IconButton>
+                    <Typography variant="h6" className={classes.title} color="">
+                        Curriculum Vitae
+                    </Typography>
+                    <Button color="inherit">Login</Button>                    
                 </Toolbar>
             </AppBar>
-            <Drawer
-                variant="persistent"
-                anchor="left"
-                open={open}
-                classes={{
-                paper: classes.drawerPaper,
-                }}
-            >
-                <div className="PhotoHeader">
-                <IconButton onClick={handleDrawerClose}>
-                    {theme.direction === 'ltr' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
-                </IconButton>
-                </div>
-                <Divider />
-                <List className="PhotoHeadere" >
-                {["About Me", 'Skills', 'Educational History', 'Professional Experience', 'Portfolio', "Hobbies", "Contacts"].map((text, index) => (
-                    <ListItem button key={text}>
-                    <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-                    <ListItemText primary={text} />
-                    </ListItem>
-                ))}
-                </List>
-            </Drawer>
+        </HideOnScroll>   
+        <Drawer className="PhotoHeadere" 
+            variant="persistent"
+            anchor="left"
+            open={open}
+            classes={{
+            paper: classes.drawerPaper,
+            }}
+        >
+            <div className="PhotoHeader">
+            <IconButton onClick={handleDrawerClose}>
+                {theme.direction === 'ltr' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
+            </IconButton>
             </div>
-        </ThemeProvider>
-    </main>
+            <Divider />
+            <List>
+            {["About Me", 'Skills', 'Educational History', 'Professional Experience', 'Portfolio', "Hobbies", "Contacts"].map((text, index) => (
+                <ListItem button key={text}>
+                <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
+                <ListItemText primary={text} />
+                </ListItem>
+            ))}
+            </List>
+        </Drawer>
+        </div>
+    </ThemeProvider>
   );
 }
