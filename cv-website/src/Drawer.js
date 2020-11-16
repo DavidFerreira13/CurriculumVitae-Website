@@ -1,3 +1,4 @@
+import "./Drawer.css";
 import React from 'react';
 import clsx from 'clsx';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
@@ -104,64 +105,52 @@ export default function PersistentDrawerLeft() {
   };
 
   return (
-    <ThemeProvider theme={theme}>
-        <div className={classes.root}>
-        <CssBaseline/>
-        <AppBar
-            position="fixed"
-            className={clsx(classes.appBar, {
-            [classes.appBarShift]: open,
-            })}
-        >
-            <Toolbar>
-            <IconButton
-                color="inherit"
-                aria-label="open drawer"
-                onClick={handleDrawerOpen}
-                edge="start"
-                className={clsx(classes.menuButton, open && classes.hide)}
+      <main>
+        <ThemeProvider theme={theme}>
+            <div  className="PhotoHeader" >
+            <AppBar
+                position="fixed"
+                className={clsx(classes.appBar, {
+                [classes.appBarShift]: open,
+                })}            
             >
-                <MenuIcon />
-            </IconButton>
-            <Typography variant="h6" noWrap>
-                Persistent drawer
-            </Typography>
-            </Toolbar>
-        </AppBar>
-        <Drawer
-            className={classes.drawer}
-            variant="persistent"
-            anchor="left"
-            open={open}
-            classes={{
-            paper: classes.drawerPaper,
-            }}
-        >
-            <div className={classes.drawerHeader}>
-            <IconButton onClick={handleDrawerClose}>
-                {theme.direction === 'ltr' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
-            </IconButton>
+                <Toolbar>
+                    <IconButton
+                        color="inherit"
+                        aria-label="open drawer"
+                        onClick={handleDrawerOpen}
+                        edge="start"
+                        className={clsx(classes.menuButton, open && classes.hide)}
+                    >
+                        <MenuIcon />
+                    </IconButton>
+                </Toolbar>
+            </AppBar>
+            <Drawer
+                variant="persistent"
+                anchor="left"
+                open={open}
+                classes={{
+                paper: classes.drawerPaper,
+                }}
+            >
+                <div className="PhotoHeader">
+                <IconButton onClick={handleDrawerClose}>
+                    {theme.direction === 'ltr' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
+                </IconButton>
+                </div>
+                <Divider />
+                <List className="PhotoHeadere" >
+                {["About Me", 'Skills', 'Educational History', 'Professional Experience', 'Portfolio', "Hobbies", "Contacts"].map((text, index) => (
+                    <ListItem button key={text}>
+                    <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
+                    <ListItemText primary={text} />
+                    </ListItem>
+                ))}
+                </List>
+            </Drawer>
             </div>
-            <Divider />
-            <List>
-            {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-                <ListItem button key={text}>
-                <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-                <ListItemText primary={text} />
-                </ListItem>
-            ))}
-            </List>
-            <Divider />
-            <List>
-            {['All mail', 'Trash', 'Spam'].map((text, index) => (
-                <ListItem button key={text}>
-                <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-                <ListItemText primary={text} />
-                </ListItem>
-            ))}
-            </List>
-        </Drawer>
-        </div>
-    </ThemeProvider>
+        </ThemeProvider>
+    </main>
   );
 }
