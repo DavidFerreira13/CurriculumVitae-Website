@@ -1,12 +1,7 @@
-import './App.css';
-import AppBar from '@material-ui/core/AppBar'
-import Toolbar from '@material-ui/core/ToolBar'
-import IconButton from '@material-ui/core/IconButton'
-import MenuIcon from '@material-ui/icons/Menu'
-import { makeStyles } from '@material-ui/core/styles';
-import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
+import './App.css'
+import { makeStyles } from '@material-ui/core/styles'
 import Drawer from './Drawer'
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -23,11 +18,28 @@ const useStyles = makeStyles((theme) => ({
 function App() {
   const classes = useStyles();
   return (
-    <div className={classes.root}>
-      <Drawer/>
-      <header className="App-header">
-      </header>
-    </div>
+    <main>
+      <div className={classes.root}>
+        <Drawer/>
+        <header className="App-header">
+          Welcome to my online Curriculum
+        </header>
+      </div>
+      {/*
+      <Router>
+        <Switch>
+          <Route path="/" exact component={Home} />
+          <Route path="/login" exact component={Login} />
+          <Route path="/signin" exact component={Signin} />
+        </Switch>
+      </Router>
+      */}
+      <footer className="page-footer">
+        <p className="footer-text">
+          This web-curriculum was made with react for the purpose of learning how to use it
+        </p>
+      </footer>
+    </main>
   );
 }
 

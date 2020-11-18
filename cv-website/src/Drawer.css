@@ -4,7 +4,14 @@
 .PhotoHeadere{
     background-color: brown;
 }
-main{
-    background-color: blue;
-    color: blue;
+
+.loginButton{
+    font-size: 30px !important;
+    border-radius: 15px !important;
+}
+img{
+    -moz-user-select: none !important;
+    -webkit-user-select: none !important;
+    user-select: none !important;
+    pointer-events: none !important;
 }

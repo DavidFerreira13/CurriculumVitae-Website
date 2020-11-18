@@ -36,3 +36,15 @@
     transform: rotate(360deg);
   }
 }
+
+.page-footer{
+  padding-right: 20px;
+  background-color: cornflowerblue !important;
+}
+
+.footer-text{
+  color:white;
+  padding: 0%;
+  margin: 0%;
+  overflow: hidden;
+}

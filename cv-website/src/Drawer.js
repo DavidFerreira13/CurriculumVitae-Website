@@ -24,6 +24,11 @@ import { brown, blue } from '@material-ui/core/colors';
 import Button from '@material-ui/core/Button';
 import useScrollTrigger from '@material-ui/core/useScrollTrigger';
 import Slide from '@material-ui/core/Slide';
+import curriculum_image from "./Images/cv-white.png"
+import ImageOfMyName from './Images/MyName.png'
+
+
+
 
 const drawerWidth = 240;
 
@@ -111,7 +116,6 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-
 export default function PersistentDrawerLeft() {
   const classes = useStyles();
   const theme = useTheme();
@@ -147,11 +151,14 @@ export default function PersistentDrawerLeft() {
                         <MenuIcon />
                     </IconButton>
                     <Typography variant="h6" className={classes.title} color="">
-                        Curriculum Vitae
+                      <img src={ImageOfMyName} width="300px" height="auto" />               
                     </Typography>
-
+                    <Typography variant="h6" className={classes.title} color="">
+                      <img src={curriculum_image} alt="Cv image" width="auto" height="120"/> 
+                    </Typography>   
                     <Button
-                        color="inherit">
+                    onClick
+                        color="inherit" className="loginButton">
                             Login
                     </Button>        
 
