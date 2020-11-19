@@ -48,3 +48,13 @@
   margin: 0%;
   overflow: hidden;
 }
+.nameImage{
+  margin-top: 10px;
+}
+.cvImage{
+  position: absolute;
+}
+#cvParent{
+  margin-top: -12px;
+  margin-right: 480px;
+}
