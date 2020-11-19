@@ -3,7 +3,6 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles'
 import Drawer from './Drawer'
 import DropDownMenu from "./DropDownMenu.js"
-import "./DropDownMenu.css"
 import {useState} from 'react'
 import Button from '@material-ui/core/Button'
 import curriculum_image from "./Images/cv-white.png"

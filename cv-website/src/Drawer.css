@@ -9,9 +9,10 @@
     font-size: 30px !important;
     border-radius: 15px !important;
     color:white;
-    margin-right: 60px;
-    padding-left: 55px;
-    padding-right: 55px;
+    padding-left: 15px;
+    padding-right: 15px;
+    letter-spacing: 0;
+    line-height: 1;
 }
 img{
     -moz-user-select: none !important;
