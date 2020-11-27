@@ -6,8 +6,8 @@ import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-import curriculum_image from "./Images/Pngs/cv.png"
-import ImageOfMyName from './Images/Pngs/MyName.png'
+import curriculum_image from "../Images/Pngs/cv.png"
+import ImageOfMyName from '../Images/Pngs/MyName.png'
 import MenuIcon from '@material-ui/icons/Menu';
 import clsx from 'clsx';
 import IconButton from '@material-ui/core/IconButton';
@@ -20,7 +20,6 @@ import Button from '@material-ui/core/Button';
 import { ButtonGroup} from '@material-ui/core';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 import {Switch, Route} from 'react-router-dom';
-import BotaoDeTeste from './BotaoDeTeste'
 import MenuOptions from './MenuOptionsList'
 import AboutMe from './MenuButtonPaths/AboutMe';
 import ContactInformation from './MenuButtonPaths/ContactInformation';
@@ -212,7 +211,6 @@ function Home() {
             <div className={classes.root}>
                 <header className="App-header">
                     <Switch>
-                        <Route path="/home"                     component={BotaoDeTeste} />
                         <Route path="/about-me"                 component={AboutMe} />
                         <Route path="/educational-history"      component={EducationalHistory} />
                         <Route path="/skills"                   component={Skills} />

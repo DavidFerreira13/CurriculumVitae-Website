@@ -5,13 +5,13 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import Divider from '@material-ui/core/Divider';
-import AboutMe from './Images/Icons/AboutMe.ico'
-import Contacts from './Images/Icons/contacts.ico'
-import EducationalHistory from './Images/Icons/educationalHistory.ico'
-import Hobbies from './Images/Icons/hobbies.ico'
-import Portfolio from './Images/Icons/portfolio.ico'
-import ProfessionalExperience from './Images/Icons/professionalExperience.ico'
-import Skills from './Images/Icons/skills.ico'
+import AboutMe from '../Images/Icons/AboutMe.ico'
+import Contacts from '../Images/Icons/contacts.ico'
+import EducationalHistory from '../Images/Icons/educationalHistory.ico'
+import Hobbies from '../Images/Icons/hobbies.ico'
+import Portfolio from '../Images/Icons/portfolio.ico'
+import ProfessionalExperience from '../Images/Icons/professionalExperience.ico'
+import Skills from '../Images/Icons/skills.ico'
 
 export default function MenuOptions(){
     return(
@@ -44,12 +44,6 @@ export default function MenuOptions(){
             </List>
 
             <Divider />
-
-            <List>
-                <ListItem component={RouterLink} to="/home" button key="teste">
-                    <ListItemText primary="Botao de Teste" />
-                </ListItem>
-            </List>
             
             <List>
                 <ListItem button key="Hobbies" component={RouterLink} to="/hobbies" >
