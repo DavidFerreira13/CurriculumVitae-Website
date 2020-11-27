@@ -17,65 +17,69 @@ const theme = createMuiTheme({
   }
 })
 
-function MyCheckBox(){
-  var pwtf = document.getElementById("passwordTextField");
-  const [checked, setChecked] = React.useState(true);
-  var myLabel = "Show Password";
-
-  if (checked && pwtf != null) {
-     myLabel = "Hide Password"
-     pwtf.type = "text" 
-  } else if(pwtf != null){
-    pwtf.type = "password"
-  }
-
-  return (    
-    <FormControlLabel
-      control={
-        <CheckBox 
-          checked={checked}
-          onChange={(e)=>setChecked(e.target.checked)}
-          color="primary"
-        />
-      }
-      label={myLabel}
-    />
-  )
-}
 
 export default function DropDownMenu() {
- 
-    return (
-      <ThemeProvider theme={theme}>
-        <div className="dropdown">
+  
+  const [myLabel, setmylabel] = React.useState("Show Password");
+  const [mycolor, setmycolor] = React.useState("primary");
+  const [passType, setPassType] = React.useState("password");
 
-          <TextField 
-              variant="outlined"
-              label="Username"
-              placeholder="example@email.com"
-              margin="normal"
-              color="primary"
-              type="email"
-              InputLabelProps={{
-                style: {
-                  color: 'grey'
-                } }}               
-            />
-            <TextField 
-            id="passwordTextField"
+  
+  function MyCheckBox(){
+
+    return (    
+      <FormControlLabel
+        control={
+          <CheckBox 
+            checked={true}
+            color={mycolor}
+            onChange={()=>{
+              mycolor === "primary"       ? setmycolor("secondary")     : setmycolor("primary")
+              myLabel === "Show Password" ? setmylabel("Hide Password") : setmylabel("Show Password")
+              passType === "password"     ? setPassType("text") : setPassType("password")
+            }
+          }
+          />
+        }
+        label={myLabel}
+      />
+    )
+  }
+
+  return (
+    <ThemeProvider theme={theme}>
+      <div className="dropdown">
+
+        <TextField 
             variant="outlined"
-            label="Password"
+            label="Username"
+            placeholder="example@email.com"
             margin="normal"
-            color="secondary"
-            type="password"
+            color="primary"
+            type="email"
             InputLabelProps={{
               style: {
                 color: 'grey'
-              } }} 
+              } }}               
           />
-          <MyCheckBox/>
-        </div>
-      </ThemeProvider>
-    )
-  }
+          <TextField 
+          id="passwordTextField"
+          variant="outlined"
+          label="Password"
+          margin="normal"
+          color="secondary"
+
+          type={passType}
+
+          InputLabelProps={{
+            style: {
+              color: 'grey'
+            } }} 
+        />
+        {MyCheckBox()}     
+      </div>
+    </ThemeProvider>
+  )
+}
+
   
