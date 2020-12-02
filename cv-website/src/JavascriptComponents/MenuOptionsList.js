@@ -14,8 +14,9 @@ import ProfessionalExperience from '../Images/Icons/professionalExperience.ico'
 import Skills from '../Images/Icons/skills.ico'
 
 export default function MenuOptions(){
+
     return(
-        <React.Fragment>           
+        <React.Fragment>
             <List>
                 <ListItem button key="About Me" component={RouterLink} to="/about-me" >
                     <ListItemIcon><img src={AboutMe} alt="About-Me" width="30px" height="auto" /></ListItemIcon>

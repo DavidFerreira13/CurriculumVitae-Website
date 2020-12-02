@@ -145,6 +145,9 @@ function Home() {
     const handleDrawerClose = () => {
       setOpen(false);
     };
+    const drawerStyle = {
+      "backgroundColor": "#282c34"
+    }
 
     return (
         <div className={drawerClasses.root}>
@@ -183,6 +186,7 @@ function Home() {
             </AppBar>
 
             <Drawer
+            style={drawerStyle}
                 variant="permanent"
                 className={clsx(drawerClasses.drawer, {
                     [drawerClasses.drawerOpen]: open,
@@ -192,10 +196,11 @@ function Home() {
                     paper: clsx({
                         [drawerClasses.drawerOpen]: open,
                         [drawerClasses.drawerClose]: !open,
-                    }),
+                    })
                 }}>
 
-                <div className={drawerClasses.toolbar}>
+                <div className={drawerClasses.toolbar}
+                  style={drawerStyle}>
                     <IconButton onClick={handleDrawerClose}>
                         {theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}
                     </IconButton>
