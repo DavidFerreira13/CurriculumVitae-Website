@@ -1,33 +1,39 @@
 import React from 'react'
 
 export default function ContactInformation(){
-    const style={
-        "justifyContent": "center",
-        "flex": "center",
-        "marginLeft": "400px",
-        "marginRight": "400px"
-    }    
-    const refStyle = {
-        "color": "cyan",
-        "textDecoration": "none"
+
+    const formStyle={
+        "transition": "all 4s easeInOut",
+    }
+    const inputStyle={
+        "backgroundColor": "transparent",
+        "resize": "none",
+        "width": "600px",
+        "borderStyle": "none none solid none",
+        "outline": "none",
+        "color": "black",
+        "font-size": "20px",
+    }
+    const submitStyle={
+        "background": "#c94444",
+        "border": "none",
+        "color": "#fff",
+        "fontSize": "20px",
+        "letterSpacing": "2px",
+        "height": "50px",
+        "width": "200px",
+        "marginTop": "20px"
     }
     return (
-    <div style={style}>
-        +351 917914724
-       <br/>
-        Mira, Portugal
-       <br/>
-        davidmferreira@hotmail.com
-       <br/>
-        <a  style={refStyle}
-            href="https://github.com/DavidFerreira13"
-            rel="noreferrer"
-            target="_blank" > My Github </a>
+    <React.Fragment>
+        <form action="" style={formStyle}>
+            <input style={inputStyle} name="name" type="text" placeholder="Your Name" required />
             <br/>
-        <a  style={refStyle}
-            href="https://www.linkedin.com/in/dmrf"
-            rel="noreferrer"
-            target="_blank" > My Linkedin </a>
-
-    </div>)
+            <input style={inputStyle} name="email" type="email" placeholder="Your email" required />
+            <br/>
+            <textarea style={inputStyle} name="message" placeholder="Your Message" rows="4" required />
+            <br/>
+            <button style={submitStyle} type="submit">Send Message</button>
+        </form>
+    </React.Fragment>)
 }

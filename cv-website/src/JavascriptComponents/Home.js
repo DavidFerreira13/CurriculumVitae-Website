@@ -28,6 +28,8 @@ import Hobbies from './MenuButtonPaths/Hobbies';
 import Portfolio from './MenuButtonPaths/Portfolio';
 import ProfessionalExperience from './MenuButtonPaths/ProfessionalExperience';
 import Skills from './MenuButtonPaths/Skills';
+import { Link as RouterLink } from 'react-router-dom';
+import MainPage from "./MainPage"
 
 const drawerWidth = 255;
 
@@ -172,10 +174,24 @@ function Home() {
                         </IconButton>
                     </div>
                     <div className={classes.title} color="">
-                        <img src={ImageOfMyName} alt="DavidFerreira" width="300px" height="auto" className="nameImage" />
+                        <Button 
+                           component={RouterLink} to="/" >
+                        <img src={ImageOfMyName}
+                         alt="DavidFerreira"
+                          width="300px" height="auto"
+                           className="nameImage" />
+                        </Button>
                     </div>
                     <div variant="h6" className={classes.title} color="" id="cvParent">
-                        <img src={curriculum_image} alt="CvImage" width="auto" height="90" className="cvImage" />
+                      <Button
+                      className="cv-button"
+                           component={RouterLink} to="/">
+                        <img src={curriculum_image}
+                         alt="CvImage"
+                          width="auto" height="90"
+                           className="cvImage" 
+                           />
+                      </Button>
                     </div>
 
                     <NavItem>
@@ -214,8 +230,9 @@ function Home() {
             </Drawer>
 
             <div className={classes.root}>
-                <header className="App-header">
+                <nav className="main-content">
                     <Switch>
+                        <Route path="/" exact                   component={MainPage} />
                         <Route path="/about-me"                 component={AboutMe} />
                         <Route path="/educational-history"      component={EducationalHistory} />
                         <Route path="/skills"                   component={Skills} />
@@ -224,7 +241,7 @@ function Home() {
                         <Route path="/hobbies"                  component={Hobbies} />
                         <Route path="/contacts"                 component={ContactInformation} />
                     </Switch>      
-                </header>
+                </nav>
             </div>
 
             <br />

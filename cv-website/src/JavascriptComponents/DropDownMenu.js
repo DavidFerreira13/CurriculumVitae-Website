@@ -51,31 +51,30 @@ export default function DropDownMenu() {
       <div className="dropdown">
 
         <TextField 
-            variant="outlined"
-            label="Username"
-            placeholder="example@email.com"
-            margin="normal"
-            color="primary"
-            type="email"
-            InputLabelProps={{
-              style: {
-                color: 'grey'
-              } }}               
-          />
-          <TextField 
-          id="passwordTextField"
           variant="outlined"
-          label="Password"
+          label="Username"
+          placeholder="example@email.com"
           margin="normal"
-          color="secondary"
-
-          type={passType}
-
+          color="primary"
+          type="email"
           InputLabelProps={{
             style: {
               color: 'grey'
-            } }} 
-        />
+            } 
+          }} />
+          
+          <TextField 
+            id="passwordTextField"
+            variant="outlined"
+            label="Password"
+            margin="normal"
+            color="secondary"          
+            type={passType}
+            InputLabelProps={{
+              style: {
+                color: 'grey'
+              } 
+            }} />
         {MyCheckBox()}     
       </div>
     </ThemeProvider>

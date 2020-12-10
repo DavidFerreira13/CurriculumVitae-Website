@@ -2,12 +2,8 @@
   text-align: center;
 }
 
-.App-header {
-  background: url(../Images/Pngs/yasuo2.png) , url(../Images/Pngs/yasuo1.png);  
-  background-position: left top, right top;
-  background-position: 1%, 99%;
-  background-repeat: no-repeat;
-  background-attachment: scroll;
+.main-content {
+  background: linear-gradient(rgba(140,0,0,0.5), rgba(40,0,0,0.5));  
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -36,14 +32,13 @@
   
 }
 .nameImage{
-  margin-top: 10px;
+  margin-top: 5px;
 }
 .cvImage{
   position: absolute;
 }
 #cvParent{
-  margin-top: -85px;
-  margin-right: 480px;
+  margin-right: 280px;
 }
 
 img{
@@ -51,4 +46,8 @@ img{
   -webkit-user-select: none !important;
   user-select: none !important;
   pointer-events: none !important;
+}
+.cv-button{
+  width: 250px;
+  height: 70px;
 }

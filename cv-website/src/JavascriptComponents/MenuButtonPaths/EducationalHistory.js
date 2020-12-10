@@ -1,5 +1,7 @@
 import React from 'react'
 
+import '../../Css/EducationalHistory.css';
+
 export default function EducationalHistory(){
     const style={
         "justifyContent": "center",
@@ -12,16 +14,21 @@ export default function EducationalHistory(){
     return (
     <div style={style}>
         <h1>EDUCATION</h1>
-            <h4>2016-2019</h4>
-                <h5>Bachelor degree in Digital Game Design at Insituto Politécnico de Bragança</h5>
-                <br/>
+        <div className="year">2016-2019</div>
+        <div className="dark fire">
+            <h1 class="Blazing">Bachelor Degree</h1>
+        </div>
+        <div className="sign">
+            <span className="fast-flicker">D</span><span>igit</span><span className="flicker">a</span><span className="fast-flicker1">l G</span><span>ame Des<span className="flicker">i</span>gn</span>
+        </div>
+        <br/>
         <h1>TRAININGS</h1>
  	        <h3>Classroom Course</h3>
-             <h4>2020</h4>
+             <div className="year">2020</div>
              <h5>Academia de Código</h5>
 
         <h1>Online Course</h1>
-            <h4>2020</h4>
+            <div className="year">2020</div>
             <h5>Frontend Fundamentals</h5>
             <h5>Complete Python 3 Course: Beginner to Advanced</h5>
             <h5>Angular – The Complete Guide</h5>

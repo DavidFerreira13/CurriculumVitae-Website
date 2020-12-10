@@ -9,6 +9,6 @@ export default function Portfolio(){
     }
     return (
     <div style={style}>
-        Still working on this page
+        Content to be added
     </div>)
 }
