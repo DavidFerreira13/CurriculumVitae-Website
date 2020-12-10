@@ -1,17 +1,17 @@
 # CurriculumVitae-Website
 2020 - Currently Developing
 
-A solo project to display my ability as a web designer
+A website that represents my curriculum.
 
 ### The idea
 
-I wanted to better my CV so the idea came straight to my mind about making a website to actually display my CV.
+I always wanted to know React, so I thought about creating a website to learn what React is and this idea came to mind.
+I wanted to better my CV so why not making actually a website of my CV.
 
 ### The Development
 
-Since i didn't really know react at all, but wanted to learn, i bought a course online on Udemy to teach me how react works.
-I started by designing how the website should look like on Inkscape, dividing it by small parts. Then i started developing.
-First thing i did was create a Header with a DropDownMenu to log-in. Then, on the other side of the page, i created a Mini-Drawer, to display Menu Items, such as: 'About Me', 'Skills', 'Educational History', 'Portfolio', 'Hobbies' and 'Contact Information'.
+I started by designing how the website should look like on Inkscape, dividing it into small parts. Then i started developing.
+First thing i did was create a Header with a DropDownMenu to log-in. Then, on the other side of the page, i created a Mini-Drawer, to display Menu Items, such as: 'About Me', 'Skills', 'Educational History', 'Portfolio', 'Hobbies' and 'Contact Information'. Then i worked on Routing to make those Meny Items actually take who clicks them somewhere. All that was left was filling each page with content and Voilá. Job Done.
 
 ### Tech && Methodologies
 JavaScript, React, Inkscape;
