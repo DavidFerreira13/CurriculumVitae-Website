@@ -51,6 +51,7 @@ export default function DropDownMenu() {
       <div className="dropdown">
 
         <TextField 
+          className="usernameTextField"
           variant="outlined"
           label="Username"
           placeholder="example@email.com"
@@ -64,7 +65,7 @@ export default function DropDownMenu() {
           }} />
           
           <TextField 
-            id="passwordTextField"
+            className="passwordTextField"
             variant="outlined"
             label="Password"
             margin="normal"
