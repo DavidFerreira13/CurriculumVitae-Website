@@ -29,7 +29,7 @@ export default function MenuOptions(){
                 </ListItem>
 
                 <ListItem button key="Skills" component={RouterLink} to="/skills" >
-                    <ListItemIcon><img src={Skills} alt="About-Me" width="30px" height="auto" /></ListItemIcon>
+                    <ListItemIcon><img src={Skills} alt="About-Me" width="44px" height="auto" /></ListItemIcon>
                     <ListItemText primary="Skills" />
                 </ListItem>
 
@@ -51,7 +51,7 @@ export default function MenuOptions(){
                     <ListItemIcon><img src={Hobbies} alt="About-Me" width="30px" height="auto" /></ListItemIcon>
                     <ListItemText primary="Hobbies" />
                 </ListItem>
-                <ListItem button key="Contact Information" component={RouterLink} to="/contacts" >
+                <ListItem button key="Contact Information" component={RouterLink} to="/contact-me" >
                     <ListItemIcon><img src={Contacts} alt="About-Me" width="30px" height="auto" /></ListItemIcon>
                     <ListItemText primary="Contact Information" />
                 </ListItem>

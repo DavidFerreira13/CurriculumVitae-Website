@@ -1,14 +1,11 @@
 import React from 'react'
-import '../Css/FireBlaze.css'
 import '../Css/MontserratEffect.css';
+import '../Css/Greeting.css';
 
 const MainPage = () => (
-    <div>
-        <div className="dark fire">
-            <div className='Blazing'>Hello, my name is</div>
-        </div>
-
-        {/* Classroom Course*/}
+    <div style={{marginLeft: '50px'}}>
+            <div className="greet">Hello, I am</div>
+            
         <svg viewBox="0 0 960 100">
             <symbol id="s-text">
                 <text text-anchor="middle" x="50%" y="80%">David Ferreira</text>
@@ -23,7 +20,7 @@ const MainPage = () => (
             </g>
         </svg>
 
-        <div style={{textAlign: "center"}}>This website doesn't support mobile yet, so make sure to be on a computer to have the full experience!</div>        
+        <div className="welcome">Welcome to my WEBSITE!</div>        
     </div>
 );
 

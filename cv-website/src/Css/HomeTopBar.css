@@ -1,0 +1,33 @@
+@import url(https://fonts.googleapis.com/css?family=Cinzel);
+
+.davidFerreiraName{
+    font-family: 'Cinzel';
+    margin-left: 10px;
+}
+.iconButton{
+    width: 100px;
+}
+.cvImage{ 
+    text-align:center;
+    margin: 0 auto;
+}
+.cv-button img{
+    width: 100%;
+    height: auto;
+}
+
+@media(max-width: 650px){
+  .davidFerreiraName{
+    font-size: 4vw;
+  }
+  .cvImage, .cv-button {
+      width: 40vw;
+      height: 70px;
+  }
+}
+@media(min-width: 651px){
+    .cv-button{
+        width: 250px;
+        height: 70px;
+    }
+}

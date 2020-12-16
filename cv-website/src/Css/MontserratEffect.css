@@ -1,14 +1,15 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
 
 svg {
-    font: 80px 'Montserrat';
+	font-family: 'Montserrat';
+	font-size: 80px;	
     margin: 0px;
-    padding: 0px;
+	padding: 0px;
+	display: block; 
 }
 
 .text-copy {
     fill: none;
-    stroke: white;
     stroke-dasharray: 6% 29%;
     stroke-width: 3px;
     stroke-dashoffset: 0%;

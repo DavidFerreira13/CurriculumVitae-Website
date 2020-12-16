@@ -15,39 +15,9 @@
   background-color: #212121;
 }
 
-.page-footer{
-  padding-right: 20px;
-  background-color: #3e3e3e !important;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-}
-
-.footer-text{
-  color:white;
-  padding: 0%;
-  margin: 0%;
-  overflow: hidden;
-  float: right;
-  
-}
-.nameImage{
-  margin-top: 5px;
-}
-.cvImage{
-  position: absolute;
-}
-#cvParent{
-  margin-right: 280px;
-}
-
 img{
   -moz-user-select: none !important;
   -webkit-user-select: none !important;
   user-select: none !important;
   pointer-events: none !important;
-}
-.cv-button{
-  width: 250px;
-  height: 70px;
 }

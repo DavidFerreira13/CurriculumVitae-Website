@@ -1,0 +1,31 @@
+.page-footer{
+    padding-right: 5px;
+    background-color: #3e3e3e !important;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+  
+.footer-text{
+    color:white;
+    padding-left: 68px;
+    margin: 0%;
+    float: right;
+}
+@media(max-width: 600px){
+    .page-footer{
+        padding-right: 5px;
+        background-color: #3e3e3e !important;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+      
+    .footer-text{
+        text-align: center;
+        color:white;
+        padding-left: 65px;
+        margin: 0%;
+        float: right;
+    }
+}

@@ -1,0 +1,45 @@
+.formStyle{
+    transition: all 4s easeInOut;
+}
+.inputStyle{
+    background-color: transparent;
+    resize: none;
+    width: 600px;
+    border-style: none none solid none;
+    outline: none;
+    color: black;
+    font-size: 20px;
+}
+.submitStyle{
+    background: #c94444;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    letter-spacing: 2px;
+    height: 50px;
+    width: 200px;
+    margin-top: 20px;
+}
+@media(max-width: 750px){
+    .inputStyle{
+        background-color: transparent;
+        resize: none;
+        width: 380px;
+        border-style: none none solid none;
+        outline: none;
+        color: black;
+        font-size: 20px;
+        margin-left: 60px;
+    }
+    .submitStyle{
+        background: #c94444;
+        border: none;
+        color: #fff;
+        font-size: 20px;
+        letter-spacing: 2px;
+        height: 50px;
+        width: 200px;
+        margin-top: 20px;
+        margin-left: 60px;
+    }
+}
