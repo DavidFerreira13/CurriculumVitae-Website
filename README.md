@@ -1,5 +1,5 @@
 # CurriculumVitae-Website
-2020 - Currently Developing
+2020
 
 A website that represents my curriculum.
 
